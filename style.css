@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  background-color: #fdf1df;
+  color: #d3537e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  border: 3px solid #222;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  background-color: #e96987;
+  border: 3px solid #222;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.grid div {
+  width: 80px;
+  height: 80px;
+  background-color: #d3537e;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid img {
+  width: 60px;
+  height: 60px;
+}
+
+.grid .wrong::before {
+  content: "✖️";
+  font-size: 2rem;
+}
+
+#message {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.8rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 60px);
+    grid-gap: 10px;
+  }
+
+  .grid div {
+    width: 60px;
+    height: 60px;
+  }
+
+  .grid img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
